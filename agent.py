@@ -18,8 +18,8 @@ def agent_1_scrape(vendor_name):
 
 def agent_2_summarize(raw_data):
     # ⚠️ Prompt includes raw data retrieved from agent_1_scrape
-    # OWASP A01: Prompt Injection
-    # OWASP A03: Training Data Poisoning - Agent scrapes untrusted sites
+    # Prompt Injection
+    # Training Data Poisoning - Agent scrapes untrusted sites
     prompt = (
         f"Here is information about a vendor:\n\n{raw_data}\n\n"
         "Summarize the most important services, products, and contacts you "
@@ -30,7 +30,7 @@ def agent_2_summarize(raw_data):
 
 def agent_3_generate_txt(vendor_name, summarized_data):
     # ⚠️ LLM is trusted to make business decisions autonomously
-    # OWASP A08: Excessive Agency
+    # Excessive Agency
     # Agents autonomously decide what to scrape/save
     prompt = (
         f"Based on the following summary, return:\n"
@@ -47,7 +47,7 @@ def agent_3_generate_txt(vendor_name, summarized_data):
     # ⚠️ This could lead to abuse and excessive API costs
 
     # ⚠️ Output is saved without validation
-    # OWASP A02: Insecure Output Handling - Model-generated output is trusted
+    # Insecure Output Handling - Model-generated output is trusted
     # blindly.
     from utils import save_txt_file
 
