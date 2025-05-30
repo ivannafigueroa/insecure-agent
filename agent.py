@@ -2,10 +2,9 @@ from langchain.llms import OpenAI
 import os
 
 # ⚠️ Hardcoded API key, proper environment variable should be used
-OPENAI_API_KEY = os.getenv("key...")
 llm = OpenAI(
     temperature=0.5,
-    openai_api_key=OPENAI_API_KEY,
+    openai_api_key="key",
     max_tokens=500,
 )
 
