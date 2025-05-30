@@ -3,3 +3,4 @@ langchain
 bs4
 requests
 textblob
+ratelimit
