@@ -1,4 +1,4 @@
-# Insecure AI Agent Pipeline
+# Insecure AI Agent
 
 This project aims to demonstrates a deliberately insecure multi-agent workflow that processes vendor information through a series of AI-powered steps.
 
