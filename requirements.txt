@@ -1,0 +1,8 @@
+openai
+langchain
+langchain-openai
+langsmith
+bs4
+requests
+textblob
+python-dotenv
